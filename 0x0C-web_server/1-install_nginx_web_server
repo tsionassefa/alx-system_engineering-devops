@@ -12,12 +12,12 @@ sudo service nginx start
 
 sudo ufw allow 'Nginx HTTP'
 
-sudo chown -R "$USER":"$USER" /var/www/html
-sudo chmod -R 755 /var/www
+sudo chown -R "$USER":"$USER" /var/log/html
+sudo chmod -R 755 /var/log
 
-cp /var/www/html/index.nginx-debian.html /var/www/html/index.nginx-debian.html.bckp
+cp /var/www/log/index.nginx-debian.html /var/log/html/index.nginx-debian.html.bckp
 
-echo -e "Hello World!" | dd status=none of=/var/www/html/index.nginx-debian.html
+echo -e "Hello World!" | dd status=none of=/var/log/html/index.nginx-debian.html
 
 sudo service nginx restart
 
