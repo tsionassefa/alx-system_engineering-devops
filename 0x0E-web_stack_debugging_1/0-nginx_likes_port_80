@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# How I solved it: delete the existing ../sites-enabled/default and replace it with a copy of
-# ../sites-available/default. You do that by creating a symbolic link.
-# NB: The flag -s creates a symbolic link, -f deletes the existing file and replaces it
+# To debug the nginx port 80, I resolved the issue by replacing the existing ../sites-enabled/default with a duplicate of ../sites-available/default.
+# this is done by creating a symbolic link using the -s flag. It is important to note that the -f flag is used to delete the existing file
+# and replace it with the new one.
 sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo service nginx restart
